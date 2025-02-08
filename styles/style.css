@@ -11,6 +11,9 @@ html {
 .page {
   inline-size: 1200px;
   block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -66,7 +69,7 @@ ol {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
@@ -90,15 +93,8 @@ ol {
 
 /* Лейаут страницы */
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   width: 1140px;
-  height: 534px;
   gap: 32px;
   display: grid;
   align-content: end;
@@ -231,10 +227,6 @@ ol {
 
 /* Блок карточек видео */
 
-.content__details {
-  height: 534px;
-}
-
 .title {
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -255,7 +247,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -282,12 +274,16 @@ ol {
   align-items: start;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
 .content__card-link:focus {
   outline: none;
+}
+
+.content__card-link:active .content__video-card {
+  background-color: #545050;
 }
 
 .content__card-link:focus-visible .content__video-card{
